@@ -2,7 +2,9 @@
 Implementation of movie recommender system for PMLDL course (assignment 2)
 
 Author: Adelina Kildeeva
+
 Email: a.kildeeva@innopolis.university
+
 Group: B21-DS-02
 
 ## Dataset
