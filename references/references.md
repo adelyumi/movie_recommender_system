@@ -1,0 +1,1 @@
+[1] Overview of key metrics for recommender systems https://github.com/recommenders-team/recommenders/blob/main/examples/03_evaluate/evaluation.ipynb

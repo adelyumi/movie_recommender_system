@@ -52,11 +52,16 @@ def main():
     # Make predictions on the test set
     with torch.no_grad():
         predictions_test = model(test_user_tensor, test_movie_tensor, test_features_tensor)
-        loss_test = nn.MSELoss()(predictions_test, test_ratings_tensor)
 
     # Calculate RMSE for the test set
+    loss_test = nn.MSELoss()(predictions_test, test_ratings_tensor)
     rmse_test = sqrt(loss_test.item())
     print(f'RMSE on Test Set: {rmse_test:.4f}')
+
+    # Calculate MAE
+    mae = nn.L1Loss()(predictions_test, test_ratings_tensor)
+    mae_value = mae.item()
+    print(f'MAE on Test Set: {mae_value:.4f}')
 
 if __name__ == '__main__':
     main()
